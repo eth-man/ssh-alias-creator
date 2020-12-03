@@ -10,7 +10,6 @@
    short=$1
    arg=$2
 
-   ## uncomment to enable
    # allow cipbaord over ssh by default?
    clipboard="yes"
 
