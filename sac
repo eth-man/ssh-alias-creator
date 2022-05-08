@@ -24,12 +24,12 @@
         port=$4
     fi
 
-    if $(grep -i "host $short" "$HOME/.ssh/config" > /dev/null); then
+    if $(grep -iFx "Host $short" "$HOME/.ssh/config" > /dev/null); then
         echo "Alias '$short' already exists" >&2
         exit
     fi
 
-    if $(grep -i "HostName $host" "$HOME/.ssh/config" > /dev/null); then
+    if $(grep -iFx "  HostName $host" "$HOME/.ssh/config" > /dev/null); then
         echo "HostName/IP '$host' already exists" >&2
         exit
     fi
